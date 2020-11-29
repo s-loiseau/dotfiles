@@ -1,0 +1,43 @@
+set from = "email"
+set realname = "name"
+set imap_user = "login"
+set imap_pass = "pass"
+set spoolfile = "imaps://imap...."
+
+set  header_cache        =~/.mutt/cache/headers
+set  message_cachedir    =~/.mutt/cache/bodies
+set  certificate_file    =~/.mutt/certificates
+
+set editor     = "vim"
+set record     = ~/Mail/sent
+set mail_check = 90
+set move       = no
+#set sort = threads
+set sort_aux = last-date-received
+set date_format = "%m/%d/%t"
+set imap_keepalive = 900
+
+set smtp_url = "smtps://email:port/"
+set smtp_pass = "pass"
+
+
+# -*-muttrc-*-
+
+# Palette for use with the Linux console.  Black background.
+
+#color hdrdefault blue black
+#color quoted blue black
+#color signature blue black
+color attachment red brightblack
+#color prompt brightmagenta black
+#color message brightred black
+#color error brightred black
+#color indicator black red
+#color status brightgreen blue
+#color tree white black
+#color normal white black
+#color markers red black
+#color search white black
+#color tilde brightmagenta black
+#color index blue black ~F
+#color index red black "~N|~O"

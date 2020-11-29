@@ -1,0 +1,95 @@
+! urxvt
+! run urxvt with fonts
+! urxvt -letsp 2 -fn xft:scientifica
+! urxvt -letsp 2 -fn xft:anorexia
+! urxvt -letsp 2 -fn xft:kates
+! urxvt -letsp 3 -fn xft:edges
+! urxvt -letsp 2 -fn xft:cure
+!
+
+Xcursor.theme:          breeze
+Xcursor.size:           48
+
+!URxvt*depth:            256
+URxvt*buffered:         true
+URxvt*cursorBlink:      false
+URxvt*underlineColor:   purple
+
+
+URxvt.internalBorder:   15
+
+!URxvt.letterSpace:      -2
+!URxvt.lineSpace:        0
+
+!URxvt*font:             xft:Amiga Forever Pro,xft:Terminus:size=30
+!URxvt*boldFont:         xft:Amiga Forever Pro
+!URxvt*font:             xft:bitocra13:style=regular
+!URxvt*font:             xft:Hack:regular:size=14
+!URxvt*font:             xft:Komodore Normal:regular:size=14
+!URxvt*font:             xft:Unscii:style:mcr:size=24:antialias=false
+!URxvt*font:             xft:Scientifica:size=11:antialias=false
+!URxvt*boldFont:         xft:Terminus:style=bold:size=24
+!
+URxvt*font:              xft:Terminus:size=14
+!URxvt*font:              xft:IBM 3270:size=14
+
+URxvt*borderless:       1
+URxvt*scrollBar:        false
+URxvt*loginShell:       true
+
+Urxvt*secondaryScroll:  true
+URxvt*saveLines:        5000
+URxvt*termName:         rxvt-unicode
+URxvt*iso14755:         false
+
+
+! BEGIN PERL EXTENSIONS
+URxvt.perl-ext-common:  default,font-size,url-select,keyboard-select,selection-to-clipboard
+URxvt.underlineURLs:    false
+URxvt.urlLauncher:      /usr/bin/qutebrowser
+URxvt.matcher.button:   1
+! PERL URL SELECT
+URxvt.url-select.underline: false
+URxvt.url-select.launcher:  /usr/bin/qutebrowser
+URxvt.keysym.M-e:       perl:url-select:select_next
+! PERL KEYBOARD SELECT - CLIPBOARD
+URxvt.keyboard-select.clipboard: true
+URxvt.keysym.M-d:       perl:keyboard-select:activate
+URxvt.keysym.M-s:       perl:keyboard-select:search
+! END PERL EXTENSIONS
+
+*background:            #000000
+
+*foreground:            #839496
+*fadeColor:             #ff0000
+*cursorColor:           #00bb00
+*pointerColorBackground:#073642
+*pointerColorForeground:#93a1a1
+
+
+!!#!! black dark/light
+*color0:                #073642
+*color8:                #073642
+!!!#!! red dark/light
+*color1:                #dc322f
+*color9:                #cb4b16
+!!#!! green dark/light
+*color2:                #859900
+*color10:               #85af00
+!!#!! yellow dark/light
+*color3:                #bb8b00
+*color11:               #b58900
+!!#!! blue dark/light
+*color4:                #268bdf
+*color12:               #268bd2
+!!#!! magenta dark/light
+*color5:                #d33682
+*color13:               #6c71c4
+!!#!! cyan dark/light
+*color6:                #2aa198
+*color14:               #2aa798
+!!#!! white dark/light
+*color7:                #eee8d5
+*color15:               #fdf6e3
+!!#
+rofi.modi:              run,ssh

@@ -1,0 +1,97 @@
+[global]
+
+    ### Display ###
+
+    geometry = "499x50-20-40"
+    #monitor = 0
+    monitor = $(xdotool get_desktop)
+    monitor = 1
+    indicate_hidden = yes
+    shrink = YES
+
+    transparency = 15
+
+    notification_height = 0
+
+    # notifications.
+    separator_height = 0
+
+    padding = 8
+
+    horizontal_padding = 8
+
+    frame_width = 0
+
+    #frame_color = "#aaaaaa"
+
+    separator_color = foreground
+
+    sort = no
+
+    idle_threshold = 0
+
+    ### Text ###
+    font = Edit Undo Line BRK 17
+    line_height = 0
+    markup = full
+
+    format = "%s\n"
+    alignment = center
+
+    show_age_threshold = -1
+
+    word_wrap = no
+    ignore_newline = no
+
+    # Merge multiple notifications with the same content
+    stack_duplicates = true
+
+    hide_duplicate_count = true
+
+    # Display indicators for URLs (U) and actions (A).
+    show_indicators = no
+
+    ### Icons ###
+    icon_position = off
+
+    ### History ###
+    sticky_history = no
+    history_length = 0
+
+    ### Misc/Advanced ###
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/firefox -new-tab
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    startup_notification = false
+
+    ### Legacy
+    force_xinerama = false
+
+[experimental]
+    per_monitor_dpi = false
+
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave
+    context = ctrl+shift+period
+
+[urgency_low]
+    background = "#222222"
+    foreground = "#888888"
+    timeout = 1
+
+[urgency_normal]
+    background = "#444444"
+    foreground = "#22ff22"
+    timeout = 1
+
+[urgency_critical]
+    background = "#900000"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 2
+
+# vim: ft=cfg

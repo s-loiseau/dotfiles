@@ -1,0 +1,40 @@
+rofi.case-sensitive:                   false
+!rofi.color-active:                   argb:00000000,  #6699CC, argb:00000000,  #6699CC,  #1B2B34
+!rofi.color-normal:                   argb:00000000,  #888888, argb:00000000,  #4c7899,  #dedede
+!rofi.color-window:                   argb:ee222222,  #00BB99, #4c7899
+rofi.color-normal:                   argb:00000000,  #00ff00, argb:00000000,  #4c7899,  #dedede
+rofi.color-urgent:                   argb:00000000,  #F99157, argb:00000000,  #F99157,  #1B2B34
+rofi.color-window:                   argb:ee222222,  #00BB19, #FFFFFF
+rofi.columns:                        1
+rofi.disable-history:                True
+rofi.fake-transparency:              true
+rofi.font:                           Edit Undo Line BRK 24
+rofi.glob:                           true
+rofi.hide-scrollbar:                 true
+rofi.kb-accept-entry:                Control+m,Return,KP_Enter
+rofi.kb-cancel:                      Escape,Control+bracketleft,Control+c
+rofi.kb-mode-next:                   Control+l
+rofi.kb-mode-previous:               Control+h
+rofi.kb-remove-char-back:            BackSpace
+rofi.kb-remove-to-eol:               Alt+k
+rofi.kb-remove-to-sol:               Alt+u
+rofi.kb-row-down:                    Control+j
+rofi.kb-row-up:                      Control+k
+rofi.location:                       0
+rofi.modi:                           window,run,ssh
+rofi.opacity:                        60
+rofi.padding:                        400
+rofi.run-shell-command:              {terminal} -e bash -c "{cmd}"
+rofi.scroll-method:                  1
+rofi.separator-style:                none
+rofi.ssh-client:                     ssh
+rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
+rofi.terminal:                       urxvt
+rofi.width:                          50
+rofi.bw:                    0
+rofi.fullscreen:                    false
+rofi.heigth:                          100
+rofi.fixed-num-lines:                true
+rofi.lines:                9
+rofi.eh:                             2
+rofi.theme: /usr/share/rofi/themes/solarized_alternate.rasi
