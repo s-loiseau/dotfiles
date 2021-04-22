@@ -4,7 +4,7 @@
 #   qute://help/settings.html
 
 # Uncomment this to still load settings configured via autoconfig.yml
-# config.load_autoconfig()
+config.load_autoconfig()
 
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
@@ -106,7 +106,8 @@ c.editor.command = ['urxvt', '-e', 'vim', '{file}']
 
 # Characters used for hint strings.
 # Type: UniqueCharString
-c.hints.chars = 'asdfghjkleruiopqwty'
+c.hints.chars = 'qwertasdfg'
+#c.hints.chars = 'asdfghjkleruiopqwty'
 
 # Hide the statusbar unless a message is shown.
 # Type: Bool
@@ -154,8 +155,6 @@ c.fonts.web.size.minimum_logical = 8
 
 # Bindings for normal mode
 config.bind('tt', 'hint links spawn transmission-remote -a {hint-url}')
-config.bind('za', 'hint links spawn cvlc {hint-url}')
-#config.bind('zs', 'spawn cvlc {url}')
-#config.bind('zx', 'hint links spawn mpv {hint-url}')
-#config.bind('zz', 'spawn mpv {url}')
+config.bind('zz', 'hint links spawn mpv --geometry=20%-20+20 {hint-url}')
 config.bind('aa', 'set-cmd-text -s :open !yt ')
+config.bind(';a', 'set-cmd-text -s :open !wfr ')
