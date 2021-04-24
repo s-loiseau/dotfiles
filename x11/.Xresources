@@ -10,7 +10,7 @@
 Xcursor.theme:          breeze
 Xcursor.size:           48
 
-!URxvt*depth:            256
+URxvt*depth:            256
 URxvt*buffered:         true
 URxvt*cursorBlink:      false
 URxvt*underlineColor:   purple
@@ -44,7 +44,7 @@ URxvt*iso14755:         false
 
 
 ! BEGIN PERL EXTENSIONS
-URxvt.perl-ext-common:  default,font-size,url-select,keyboard-select,selection-to-clipboard
+URxvt.perl-ext-common:  default,resize-font,url-select,keyboard-select,selection-to-clipboard
 URxvt.underlineURLs:    false
 URxvt.urlLauncher:      /usr/bin/qutebrowser
 URxvt.matcher.button:   1
@@ -69,7 +69,7 @@ URxvt.keysym.M-s:       perl:keyboard-select:search
 
 !!#!! black dark/light
 *color0:                #073642
-*color8:                #073642
+*color8:                #0736f2
 !!!#!! red dark/light
 *color1:                #dc322f
 *color9:                #cb4b16

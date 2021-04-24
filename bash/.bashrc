@@ -27,6 +27,9 @@ alias tmux='tmux -2'
 alias cdl='cd ~/CODE/LOVE'
 alias figletshow="ls -R | fzf -m --preview \"echo 'Metroidéééééèèèèèçàù' | figlet -k -c -f {} | lolcat\""
 
+alias ghs="git status -bs"
+alias ghc='git commit -m "$(read)"'
+
 # TRADUCTIONS
 trs() {
     word="$*"
@@ -88,8 +91,8 @@ alias pacs="pacman -Ss"
 # update base
 alias pacu="sudo pacman -Sy"
 
-alias stacups='sudo systemctl start org.cups.cupsd.service'
-alias stocups='sudo systemctl stop org.cups.cupsd.service'
+alias stacups='sudo systemctl start cups'
+alias stocups='sudo systemctl stop cups'
 
 #alias subli='subliminal download -l en -l fr'
 
@@ -188,9 +191,7 @@ ip -br -4 addr show | grep UP | grep -w $nic | cut -d' ' -f 25 | sed 's#/.*##'
 }
 
 fips () {
-nic=${1:-wlp1s0}
-## ipas show 193.49.5.6/21
-ip -br -4 addr show | grep UP | grep -w $nic | cut -d' ' -f 25
+ip -br -4 addr show | grep UP | cut -d' ' -f 25
 }
 
 export PRINTER=Canon-MG5300-series_18-0C-AC-33-80-90
