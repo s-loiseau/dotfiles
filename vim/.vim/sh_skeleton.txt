@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-_current_dir=$(dirname $(basename $0))
-
-
