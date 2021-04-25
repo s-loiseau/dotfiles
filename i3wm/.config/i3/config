@@ -6,13 +6,13 @@ font pango:Scientifica
 set $mod Mod1
 set $mod2 Mod4
 
-#for_window [class="[.]*"] floating enable
+for_window [class="[.]*"] floating enable
 focus_follows_mouse no
 floating_modifier $mod
 workspace_auto_back_and_forth yes
 
 ##### BOOT ####################
-exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
+exec --no-startup-id feh --randomize --bg-fit ~/Pictures/wallpaper/*
 #exec --no-startup-id picom -bGC --config ~/.config/picom.conf
 exec --no-startup-id dunst
 
@@ -71,7 +71,7 @@ bindsym $mod+o                exec --no-startup-id rofi -show run
 #bindsym $mod+t                exec --no-startup-id thunar
 bindsym $mod+t                exec --no-startup-id /usr/bin/python3 ~/myrepo/arcademenu/main.py
 bindsym $mod+u                exec --no-startup-id qutebrowser
-bindsym $mod+Shift+w          exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
+bindsym $mod+Shift+w          exec --no-startup-id feh --randomize --bg-max ~/Pictures/wallpaper/*
 
 ##### HOMEMADE TOOLS ######
 # SHOW PDFS
@@ -91,17 +91,13 @@ bindsym $mod2+w               exec --no-startup-id touchpadtoggle.sh
 
 ##### I3 CONTROLS ########
 
-bindsym $mod2+j workspace next
-bindsym $mod2+k workspace prev
-bindsym $mod2+u workspace 1
-bindsym $mod2+i workspace 2
-bindsym $mod2+o workspace 3
-bindsym $mod2+p workspace 4
+bindsym $mod2+j workspace 1 ; exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/city11.jpg
+bindsym $mod2+k workspace 2 ; exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/cyberpunk-artwork-69-2560x1080.jpg
+bindsym $mod2+l workspace 3 ; exec --no-startup-id feh --bg-max ~/Pictures/wallpaper/floppies0005.png
 
-bindsym $mod2+Shift+u move container to workspace 1
-bindsym $mod2+Shift+i move container to workspace 2
-bindsym $mod2+Shift+o move container to workspace 3
-bindsym $mod2+Shift+p move container to workspace 4
+bindsym $mod2+Shift+j move container to workspace 1
+bindsym $mod2+Shift+k move container to workspace 2
+bindsym $mod2+Shift+l move container to workspace 3
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec i3-msg exit
