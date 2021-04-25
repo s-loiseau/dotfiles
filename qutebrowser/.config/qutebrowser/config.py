@@ -106,7 +106,7 @@ c.editor.command = ['urxvt', '-e', 'vim', '{file}']
 
 # Characters used for hint strings.
 # Type: UniqueCharString
-c.hints.chars = 'qwertasdfg'
+c.hints.chars = 'qwerasdf'
 #c.hints.chars = 'asdfghjkleruiopqwty'
 
 # Hide the statusbar unless a message is shown.
@@ -156,5 +156,6 @@ c.fonts.web.size.minimum_logical = 8
 # Bindings for normal mode
 config.bind('tt', 'hint links spawn transmission-remote -a {hint-url}')
 config.bind('zz', 'hint links spawn mpv --geometry=20%-20+20 {hint-url}')
+config.bind('xx', 'hint links spawn mpv --force-window --ytdl-format="bestvideo[height<=244]+bestaudio" --geometry=20%-20+20 {hint-url}')
 config.bind('aa', 'set-cmd-text -s :open !yt ')
 config.bind(';a', 'set-cmd-text -s :open !wfr ')
