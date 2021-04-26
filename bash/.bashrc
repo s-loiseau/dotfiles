@@ -96,7 +96,7 @@ alias stocups='sudo systemctl stop cups'
 
 #alias subli='subliminal download -l en -l fr'
 
-alias tshow='watch -n 1 "transmission-remote -l|egrep -i \"down|queued\""'
+alias tshow="transmission-remote -l| awk 'NR!=1 && !/^Sum/'"
 alias tstart='transmission-daemon -w ~/Videos'
 alias tstop='transmission-remote --exit'
 

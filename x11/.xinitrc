@@ -13,7 +13,7 @@ setxkbmap -layout us,ca -variant ,multi -option "ctrl:nocaps" -option "grp:win_s
 #setxkbmap -device 12 -layout us,ca -variant ,multi -option "ctrl:nocaps" -option "grp:win_space_toggle"
 xrdb .Xresources
 xreload
-~/.screenlayout/1920.sh
+#~/.screenlayout/1920.sh
 exec i3
 #exec openbox
 
