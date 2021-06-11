@@ -19,8 +19,8 @@ inoremap jk <ESC>
 nnoremap <leader>t :TagbarToggle<CR>
 "nnoremap <F11> :e ~/.vimrc<CR>
 "nnoremap <F12> :w<CR>:so ~/.vimrc<CR>:echo "RELOADED"<CR>
-"nnoremap <leader>rr :w<CR>:!clear;python %:p<CR><CR>
-nnoremap <leader>rr :w<CR>:terminal python %:p<CR><CR>:q<CR><CR>
+nnoremap <leader>rr :w<CR>:!clear;python %:p<CR><CR>
+"nnoremap <leader>rr :w<CR>:terminal python %:p<CR><CR>:q<CR><CR>
 nnoremap <silent><leader><TAB> :bn!<CR>
 nnoremap <silent><leader>d :bw<CR>
 nnoremap <leader>e :Vex 20<CR>
@@ -103,8 +103,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'lfv89/vim-interestingwords'
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/LimeLight.vim'
+    Plug 'chrisbra/Colorizer'
 call plug#end()
 
 "let g:limelight_conceal_ctermfg = 'gray'
 "colorscheme monokain
 colorscheme goodwolf
+" :vimgrep pattern *|copen|wincmd w<CR>

@@ -156,6 +156,8 @@ c.fonts.web.size.minimum_logical = 8
 # Bindings for normal mode
 config.bind('tt', 'hint links spawn transmission-remote -a {hint-url}')
 config.bind('zz', 'hint links spawn --detach mpv --geometry=20%-20+20 {hint-url}')
-config.bind('xx', 'hint links spawn mpv --detach --force-window --ytdl-format="bestvideo[height<=244]+bestaudio" --geometry=20%-20+20 {hint-url}')
+config.bind('xx', 'hint links spawn --detach mpv --force-window --ytdl-format="bestvideo[height<=244]+bestaudio" --geometry=20%-20+20 {hint-url}')
+config.bind('zx', 'hint links spawn --detach mpv --force-window --ytdl-format="bestvideo[height<=1080]+bestaudio" --geometry=20%-20+20 {hint-url}')
 config.bind('aa', 'set-cmd-text -s :open !yt ')
 config.bind(';a', 'set-cmd-text -s :open !wfr ')
+

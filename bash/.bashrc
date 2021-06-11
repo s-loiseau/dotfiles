@@ -20,7 +20,10 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWSTASHSTATE=1 #export GIT_PS1_DESCRIBE_STYLE='contains'
 export GIT_PS1_SHOWUPSTREAM='legacy git'
 
+# use ;y (hint links yank) first in qutebrowse
+alias ytdlmp3clip='cd ~/Music ; youtube-dl --extract-audio --audio-format mp3 $(getc)'
 
+alias tshow='while true; do clear; transmission-remote -l ; sleep 5 ; done'
 alias caly='cal -mwy'
 alias cdc='cd ~/Code/'
 alias tmux='tmux -2'
@@ -96,7 +99,6 @@ alias stocups='sudo systemctl stop cups'
 
 #alias subli='subliminal download -l en -l fr'
 
-alias tshow="transmission-remote -l| awk 'NR!=1 && !/^Sum/'"
 alias tstart='transmission-daemon -w ~/Videos'
 alias tstop='transmission-remote --exit'
 
@@ -201,9 +203,9 @@ export PRINTER=Canon-MG5300-series_18-0C-AC-33-80-90
 #export TERM="xterm-256color"
 
 RED=$(tput setaf 1)
-GRN=$(tput setaf 2)
-YEL=$(tput setaf 3)
-BLU=$(tput setaf 4)
+GRN=$(tput setaf 148)
+YEL=$(tput setaf 220)
+BLU=$(tput setaf 33)
 PUR=$(tput setaf 5)
 CYA=$(tput setaf 6)
 BLD=$(tput bold)

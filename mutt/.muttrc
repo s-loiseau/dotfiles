@@ -1,43 +1,126 @@
-set from = "email"
-set realname = "name"
-set imap_user = "login"
-set imap_pass = "pass"
-set spoolfile = "imaps://imap...."
+auto_view text/html
+set mail_check_stats
+
+set sidebar_visible = yes
+set sidebar_width = 20
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
+set mbox_type = Maildir
+
+set pager_index_lines=5
+
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+bind pager       j   next-line
+bind pager       k   previous-line
+
+set from      = "toto@mail.com"
+set realname  = "Realname"
+set imap_user = "imap_user"
+set imap_pass = `pass show email/main`
+set folder = "imaps://imap.mail.com:666"
+set spoolfile = "+INBOX"
+set record    = ~/Mail/sent
+set record    = "=Sent"
+set trash     = "=Trash"
+set postponed = "=Drafts"
+
+mailboxes = =INBOX \
+=Sent \
+=Drafts \
+=Junk \
+=Trash \
+=folder1 \
+=folder2 \
+=folder3
 
 set  header_cache        =~/.mutt/cache/headers
 set  message_cachedir    =~/.mutt/cache/bodies
 set  certificate_file    =~/.mutt/certificates
 
 set editor     = "vim"
-set record     = ~/Mail/sent
 set mail_check = 90
 set move       = no
-#set sort = threads
-set sort_aux = last-date-received
-set date_format = "%m/%d/%t"
+set sort = reverse-threads
+set sort_aux = date-received
+set date_format = "%d %h"
+
+#set index_format = "%d %n"
 set imap_keepalive = 900
 
-set smtp_url = "smtps://email:port/"
-set smtp_pass = "pass"
+set smtp_url = "smtps://smtpuser@smtp.mail.com:444/"
+set smtp_pass = `pass show email/main`
 
+set ssl_starttls=yes
+set ssl_force_tls=yes
+set imap_check_subscribed
+set header_cache=~/Mail/.hcache
 
+set send_charset='utf-8'
 # -*-muttrc-*-
 
 # Palette for use with the Linux console.  Black background.
 
-#color hdrdefault blue black
-#color quoted blue black
-#color signature blue black
-color attachment red brightblack
-#color prompt brightmagenta black
-#color message brightred black
-#color error brightred black
-#color indicator black red
-#color status brightgreen blue
-#color tree white black
-#color normal white black
-#color markers red black
-#color search white black
-#color tilde brightmagenta black
-#color index blue black ~F
-#color index red black "~N|~O"
+color index brightyellow black ~N
+color index brightyellow black ~F
+color index black red ~T
+color index brightred black ~D
+
+# Highlights inside the body of a message.
+
+# URLs
+color body brightgreen black "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+color body brightgreen black "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+
+# email addresses
+color body brightgreen black "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+# header
+color header green black "^from:"
+color header green black "^to:"
+color header green black "^cc:"
+color header green black "^date:"
+color header yellow black "^newsgroups:"
+color header yellow black "^reply-to:"
+color header brightcyan black "^subject:"
+color header red black "^x-spam-rule:"
+color header green black "^x-mailer:"
+color header yellow black "^message-id:"
+color header yellow black "^Organization:"
+color header yellow black "^Organisation:"
+color header yellow black "^User-Agent:"
+color header yellow black "^message-id: .*pine"
+color header yellow black "^X-Fnord:"
+color header yellow black "^X-WebTV-Stationery:"
+color header yellow black "^X-Message-Flag:"
+color header yellow black "^X-Spam-Status:"
+color header yellow black "^X-SpamProbe:"
+color header red black "^X-SpamProbe: SPAM"
+
+
+# Coloring quoted text - coloring the first 7 levels:
+color quoted cyan black
+color quoted1 yellow black
+color quoted2 red black
+color quoted3 green black
+color quoted4 cyan black
+color quoted5 yellow black
+color quoted6 red black
+color quoted7 green black
+
+
+# Default color definitions
+color hdrdefault white green
+color signature brightmagenta black
+color indicator black green
+color attachment black green
+color error red black
+color message white black
+color search brightwhite magenta
+color status black cyan
+color tree brightblue black
+color normal white black
+color tilde green black
+color bold brightyellow black
+color underline magenta black
+color markers brightcyan black

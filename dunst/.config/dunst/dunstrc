@@ -2,8 +2,9 @@
 
     ### Display ###
 
-    geometry = "499x50-20-40"
+    geometry = "0+0+250+40"
     #monitor = 0
+    progress_bar = true
     monitor = $(xdotool get_desktop)
     monitor = 1
     indicate_hidden = yes
@@ -31,7 +32,7 @@
     idle_threshold = 0
 
     ### Text ###
-    font = Edit Undo Line BRK 17
+    font = Edit Undo Line BRK 30
     line_height = 0
     markup = full
 
@@ -80,18 +81,18 @@
 
 [urgency_low]
     background = "#222222"
-    foreground = "#888888"
-    timeout = 1
+    foreground = "#22ff22"
+    timeout = 4
 
 [urgency_normal]
     background = "#444444"
     foreground = "#22ff22"
-    timeout = 1
+    timeout = 4
 
 [urgency_critical]
     background = "#900000"
     foreground = "#ffffff"
     frame_color = "#ff0000"
-    timeout = 2
+    timeout = 4
 
 # vim: ft=cfg

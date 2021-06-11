@@ -1,0 +1,3 @@
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+#text/pdf; mupdf %s; print=lp %s
+application/pdf; mupdf %s; print=lp %s
