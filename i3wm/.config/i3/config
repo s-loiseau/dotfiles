@@ -5,7 +5,7 @@ font pango:Scientifica
 set $mod Mod1
 set $mod2 Mod4
 set $exe exec --no-startup-id
-set $feh exec --no-startup-id feh --bg-max
+set $feh exec --no-startup-id feh --bg-fill
 
 focus_follows_mouse no
 floating_modifier $mod

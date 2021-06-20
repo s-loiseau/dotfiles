@@ -22,6 +22,7 @@ export GIT_PS1_SHOWUPSTREAM='legacy git'
 
 # use ;y (hint links yank) first in qutebrowse
 alias ytdlmp3clip='cd ~/Music ; youtube-dl --extract-audio --audio-format mp3 $(getc)'
+alias ytdlvideo='cd ~/Videos/ ; youtube-dl $(getc)'
 
 alias tshow='while true; do clear; transmission-remote -l ; sleep 5 ; done'
 alias caly='cal -mwy'
@@ -99,7 +100,7 @@ alias stocups='sudo systemctl stop cups'
 
 #alias subli='subliminal download -l en -l fr'
 
-alias tstart='transmission-daemon -w ~/Videos'
+alias tstart='transmission-daemon -w ~/Videos && tshow ; tstop'
 alias tstop='transmission-remote --exit'
 
 alias subl='subliminal download -l fr'
@@ -220,4 +221,4 @@ fi
 # temp fix
 export PS1='\[$BLU\]\w\[$YEL\]\n\[$BLD\]\[$GRN\]\$\[$RED\]$(branch) \[$YEL\]>\[$RST\] '
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
