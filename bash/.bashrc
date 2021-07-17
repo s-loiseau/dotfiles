@@ -24,6 +24,7 @@ export GIT_PS1_SHOWUPSTREAM='legacy git'
 alias ytdlmp3clip='cd ~/Music ; youtube-dl --extract-audio --audio-format mp3 $(getc)'
 alias ytdlvideo='cd ~/Videos/ ; youtube-dl $(getc)'
 
+alias blueon='bluetoothctl power on'
 alias tshow='while true; do clear; transmission-remote -l ; sleep 5 ; done'
 alias caly='cal -mwy'
 alias cdc='cd ~/Code/'
