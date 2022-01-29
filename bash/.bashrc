@@ -21,6 +21,50 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWSTASHSTATE=1 #export GIT_PS1_DESCRIBE_STYLE='contains'
 export GIT_PS1_SHOWUPSTREAM='legacy git'
+<<<<<<< HEAD
+=======
+
+# use ;y (hint links yank) first in qutebrowse
+alias ytdlmp3clip='cd ~/Music ; youtube-dl --extract-audio --audio-format mp3 $(getc)'
+alias ytdlvideo='cd ~/Videos/ ; youtube-dl $(getc)'
+
+alias blueon='bluetoothctl power on'
+alias tshow='while true; do clear; transmission-remote -l ; sleep 5 ; done'
+alias caly='cal -mwy'
+alias cdc='cd ~/Code/'
+alias tmux='tmux -2'
+alias cdl='cd ~/CODE/LOVE'
+alias figletshow="ls -R | fzf -m --preview \"echo 'Metroidéééééèèèèèçàù' | figlet -k -c -f {} | lolcat\""
+
+alias ghs="git status -bs"
+alias ghc='git commit -m "$(read)"'
+
+# TRADUCTIONS
+trs() {
+    word="$*"
+    trans :fr -show-original-dictionary N \
+              -show-dictionary N \
+              -show-original N \
+              -show-languages N \
+              -show-prompt-message N \
+              -show-translation N \
+              "$word"
+}
+
+## MAP THIS TO VIM
+
+#alias shofont="fc-list | awk -F: '{printf \"%-95s %s\n%s\n\", \$1, \$3, \$2}'"
+alias hdmi1='~/.screenlayout/1920hdmi2.sh; feh --randomize --bg-fill ~/Pictures/wallpaper/*'
+alias hdmi2='~/.screenlayout/2560hdmi2.sh; feh --randomize --bg-fill ~/Pictures/wallpaper/*'
+alias hdmioff='~/.screenlayout/nohdmi.sh; feh --randomize --bg-fill ~/Pictures/wallpaper/*'
+alias hdmionly='~/.screenlayout/onlyhdmi19.sh; feh --randomize --bg-fill ~/Pictures/wallpaper/*'
+alias rmux='if [ -z "$(tmux ls)" ]; then tmux ;else tmux attach -t 0 ; fi'
+alias shodim='echo $COLUMNS $LINES'
+alias shofontb='ls -rlth /usr/share/kbd/consolefonts/'
+alias kcli='keepassxc-cli'
+alias jup='jupyter notebook ~/CODE/NOTEBOOK'
+alias ffeh='nohup feh -. -g 640x360 -xq &>/dev/null &'
+>>>>>>> 2dbcdeeef93e7da67fe82fb72ab1bed0aa85e4e7
 alias gadd='git add'
 alias gcom='git commit -m'
 alias gdif='git diff'
