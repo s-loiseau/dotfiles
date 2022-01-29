@@ -1,6 +1,9 @@
 # linespace lsp
 # charspace letsp
-font pango:Scientifica
+#font pango:Scientifica 25px bold
+#font pango:Edit Undo Line BRK 24
+#font pango:Edit Undo Line BRK 8
+font pango:Terminus 11px bold
 
 set $mod Mod1
 set $mod2 Mod4
@@ -9,6 +12,8 @@ set $feh exec --no-startup-id feh --bg-fill
 
 focus_follows_mouse no
 floating_modifier $mod
+
+for_window [class="[.]*"]            border normal
 
 new_float pixel 10
 new_window pixel 4
@@ -28,18 +33,21 @@ for_window [class="Blender"]           fullscreen
 for_window [class="MuPDF"]           floating enable
 for_window [class="feh"]             floating enable
 for_window [class="mpv"]             floating enable
+for_window [class="Virtual MIDI.*"]             floating enable
+for_window [class="JACK.*"]             floating enable
 for_window [title="Volume Control"]  floating enable
 
 # fly and visible on everyworkspace and no focus
 for_window [title="pygame window"]   sticky enable
 
 # TIME NO FOCUS
+for_window [instance="urxvt" title="time"] border pixel 1
 for_window [instance="urxvt" title="time"] floating enable
 for_window [instance="urxvt" title="time"] sticky enable
 no_focus   [instance="urxvt" title="time"]
 
 
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #ff5577
+client.focused          #ff5577 #ff5577 #ffffff #2e9ef4   #ff5577
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #000000
 client.unfocused        #333333 #ffffff #888888 #292d2e   #222222
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -63,8 +71,8 @@ bindsym $mod+Return           exec urxvt
 
 bindsym $mod+u                $exe qutebrowser
 bindsym $mod+i                $exe /usr/bin/python3 ~/myrepo/arcademenu/main.py
-bindsym $mod+o                $exe rofi -show run
-bindsym --release $mod+p      $exe scrot -s
+bindsym $mod+o                $exe rofi -show run -theme /usr/share/rofi/themes/solarized_alternate.rasi
+bindsym --release $mod+p      $exe scrot -s -e 'xclip -selection clipboard -t image/png -i $f'
 
 
 bindsym $mod+Shift+p          $exe locker.sh
@@ -104,9 +112,11 @@ bindsym $mod2+Right           $exe kaboom.py move
 bindsym $mod2+Up              $exe kaboom.py size
 bindsym $mod2+Down            $exe kaboom.py size
 
-bindsym $mod2+e               $exe playerctl next
-bindsym $mod2+r               $exe playerctl previous
-bindsym $mod2+w               $exe playerctl play-pause
+#bindsym $mod2+e               $exe playerctl next ; $exe notify-send "NEXT"
+bindsym $mod2+comma           $exe playerctl next ; $exe notify-send "NEXT"
+bindsym $mod2+r               $exe playerctl previous; $exe notify-send "PREVIOUS"
+bindsym $mod2+w               $exe playerctl play-pause; $exe notify-send "PAUSE"
+bindsym $mod2+m               $exe switchaudio.sh ; $exe notify-send "SWITCH AUDIO"
 
 bindsym $mod2+j               workspace 1; $feh ~/Pictures/wallpaper/A.jpg
 bindsym $mod2+k               workspace 2; $feh ~/Pictures/wallpaper/B.jpg
@@ -117,5 +127,5 @@ bindsym $mod2+o               move container to workspace 3
 
 bindsym $mod2+z               kill
 
-bindsym $mod2+m               $exe getbattery.sh
+#bindsym $mod2+m               $exe getbattery.sh
 bindsym $mod2+n               $exe touchpadtoggle.sh

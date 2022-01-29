@@ -19,7 +19,8 @@ inoremap jk <ESC>
 nnoremap <leader>t :TagbarToggle<CR>
 "nnoremap <F11> :e ~/.vimrc<CR>
 "nnoremap <F12> :w<CR>:so ~/.vimrc<CR>:echo "RELOADED"<CR>
-nnoremap <leader>rr :w<CR>:!clear;python %:p<CR><CR>
+"nnoremap <leader>rr :w<CR>:!clear;python %:p<CR><CR>
+nnoremap <leader>rr :w<CR>:!clear;python %:p<CR>
 "nnoremap <leader>rr :w<CR>:terminal python %:p<CR><CR>:q<CR><CR>
 nnoremap <silent><leader><TAB> :bn!<CR>
 nnoremap <silent><leader>d :bw<CR>
@@ -36,7 +37,7 @@ set number
 set nomodeline
 set clipboard^=unnamedplus
 
-filetype indent on
+"filetype indent on
 filetype plugin on
 
 syntax enable
@@ -73,6 +74,15 @@ set autoindent
 set smartindent
 set hlsearch
 set nofoldenable
+
+"set foldnestmax=2
+set foldmethod=indent
+"fold all
+nnoremap mm zM
+"unfold all
+nnoremap MM zR
+
+
 set cmdheight=1
 set noswapfile
 set nobackup
@@ -108,5 +118,6 @@ call plug#end()
 
 "let g:limelight_conceal_ctermfg = 'gray'
 "colorscheme monokain
-colorscheme goodwolf
+"colorscheme goodwolf
+colorscheme molokai
 " :vimgrep pattern *|copen|wincmd w<CR>

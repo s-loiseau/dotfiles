@@ -10,6 +10,7 @@ URxvt*underlineColor:   purple
 
 URxvt.internalBorder:   15
 URxvt*font:             xft:Terminus:size=12
+URxvt*boldFont:         xft:Terminus:size=12:style=bold
 
 URxvt*borderless:       1
 URxvt*scrollBar:        false
@@ -26,23 +27,21 @@ URxvt.perl-ext-common:  default,resize-font,url-select,keyboard-select,selection
 URxvt.underlineURLs:    false
 URxvt.urlLauncher:      /usr/bin/qutebrowser
 URxvt.matcher.button:   1
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:reset
+URxvt.keysym.C-equal:     resize-font:bigger
+URxvt.keysym.C-question:  resize-font:show
 ! PERL URL SELECT
 URxvt.url-select.underline: false
 URxvt.url-select.launcher:  /usr/bin/qutebrowser
 URxvt.keysym.M-e:       perl:url-select:select_next
-! PERL KEYBOARD SELECT - CLIPBOARD
-!URxvt.keyboard-select.clipboard: true
 URxvt.keysym.M-d:       perl:keyboard-select:activate
+! defaut to paste clipboard is control alt v, I remap this to control shift v.
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 ! END PERL EXTENSIONS
 
 *foreground:            #bbbbbb
 *background:            #000000
-
-!*fadeColor:             #ff0000
-!*cursorColor:           #00bb00
-
-!*pointerColorForeground:#93a1a1
-!*pointerColorBackground:#073642
 
 !! black dark/light
 *color0:                #000000
